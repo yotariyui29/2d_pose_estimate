@@ -1,0 +1,4 @@
+# このPCのデータの場所。実際の場所に書き換える（git管理外の paths.local.toml で上書きも可）。
+xsens_root = "data/xsens/<被験者>/<日付>/<left|right>_shoot/xsens"
+pose2d_root = "output"
+kinovea_root = ""

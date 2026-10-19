@@ -1,0 +1,6 @@
+numpy
+scipy
+pandas
+matplotlib
+opensim        # OpenSim出力に必要（--no-opensim なら不要）。Pose2Simを入れるとGeometry(メッシュ)も自動で複製される
+# Pose2Sim     # 任意: OpenSim GUIで骨を表示するメッシュの複製元

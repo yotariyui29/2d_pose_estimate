@@ -1,0 +1,4 @@
+# Xsens の要因から除外する試行。trial_no が空欄ならその被験者の全試行。
+# scope: all = Xsens を一切使わない / posture = 直立(stop)基準の姿勢角・スイング面・3D(imu3d・OpenSim・アニメーション)は使わず、
+#        インパクト時刻に対する相対値(ピークの時間差・角速度ピーク)だけ使う。
+session,trial_no,scope,reason

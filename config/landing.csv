@@ -1,0 +1,3 @@
+# 着弾位置(ゴール平面, ボール中心原点, m)。y: 被験者から見て右が+(図の横軸も右が+), z: 上が+。kick_side の蹴り足側が +y になるよう解析側で換算する(右足はそのまま、左足は符号反転)。
+# trial=動画名。列: session,trial,y_m,z_m,subject_id,kick_side,experience_y
+session,trial,y_m,z_m,subject_id,kick_side,experience_y,source

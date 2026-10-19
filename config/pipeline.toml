@@ -1,0 +1,18 @@
+# 2D運動学パイプライン既定値。セッション固有の値は config/sessions.csv / calib/*.json に置く。
+[detect]
+backend = "rtmlib"        # rtmlib: 足先/踵あり(Halpe26) / yolo: COCO17のみ(足先なし)
+rtm_mode = "performance"  # performance | balanced | lightweight
+device = "auto"           # auto: CUDAが使えればGPU / cpu / cuda
+yolo_pose_model = "yolov8x-pose.pt"
+ball_backend = "onnx"      # onnx: onnxruntimeのみ(torch不要) / ultralytics: torch必須
+ball_model = "yolox_m"     # onnx: yolox_s|m|l|x(初回に~/.cache/pose2dへ自動DL) / ultralytics: yolov8x.pt等。空文字でボール検出なし
+ball_class_id = 32
+min_kp_conf = 0.3         # これ未満のキーポイントは欠損扱い
+ball_gate_px = 150        # 前フレーム位置からの最大移動(px/frame)
+
+[process]
+cutoff_hz = 15.0          # 数値 or "auto"(Winter残差解析)
+filter_order = 4
+max_gap_frames = 30       # これ以下の欠損のみ補間
+spike_mad = 6.0           # 中央値からのMAD倍数を超える速度スパイクを欠損化
+pad_frames = 50           # フィルタ端効果対策の反射パディング
